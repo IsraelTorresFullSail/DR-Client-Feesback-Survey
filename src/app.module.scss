@@ -1,0 +1,64 @@
+/**
+******** LAYOUT ********
+**/
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+// Colors Vars
+$white: #ffffff;
+$black: #221f1f;
+$grayLight: #ececec;
+$grayDark: #ababab;
+$orangeLight: #ffa23e;
+$orangeDark: #ff7700;
+$blueLight: #7dcff3;
+$blueDark: #009dd8;
+$greenLight: #d4de29;
+$greenMedium: #d4de29;
+$greenDark: #b9c400;
+$required: #da6d6d;
+
+$laptop-breakpoint: 1650px;
+$small-laptop-breakpoint: 1024px;
+$tablet-breakpoint: 780px;
+$mobile-breakpoint: 375px;
+$small-mobile-breakpoint: 320px;
+
+.body {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(0.8em, 0.83vw, 1em);
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 6vw 0 0 0;
+  background-color: $white;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(1.825em, 3.02vw, 3.625em);
+  text-transform: uppercase;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Istok Web', sans-serif;
+  font-size: clamp(1.12em, 1.04vw, 1.3em);
+  font-weight: 500;
+  margin-bottom: 3vw;
+  line-height: 150%;
+}
+
+p {
+  font-family: 'Istok Web', sans-serif;
+  font-size: clamp(0.8em, 0.83vw, 1em);
+  margin-top: 5px;
+  margin-bottom: 20px;
+  line-height: 140%;
+}

@@ -1,0 +1,23 @@
+@import '../../app.module.scss';
+
+.checkbox {
+    margin-right: 10px;
+    margin-top: 5px;
+
+    @media (max-width: $laptop-breakpoint){
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    @media (max-width: $tablet-breakpoint){
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    @media (max-width: $mobile-breakpoint){
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    @media (max-width: $small-mobile-breakpoint){
+        margin-right: 10px;
+        margin-top: 25px;
+    }
+}

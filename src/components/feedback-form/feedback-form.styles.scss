@@ -1,0 +1,29 @@
+@import '../../app.module.scss';
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F3F3F3;
+    background-image: linear-gradient(
+      rgba(243, 243, 243, 0.8), 
+      rgba(243, 243, 243, 0.8)
+    ),
+    url('../../assets/bg.jpg');
+    background-size: 72.78vw auto;
+    background-position: 100% 50%;
+    background-attachment: fixed;
+
+    @media (max-width: $laptop-breakpoint){
+      background-size: 102.78vw auto;
+    }
+    @media (max-width: $small-laptop-breakpoint){
+      background-size: 132.78vw auto;
+    }
+    @media (max-width: $tablet-breakpoint){
+      background-size: 292.78vw auto;
+      background-position: 50% 50%;
+    }
+    @media (max-width: $mobile-breakpoint){
+      background-size: 352.78vw auto;
+    }
+}

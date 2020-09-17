@@ -1,0 +1,27 @@
+@import '../../app.module.scss';
+
+.formErrors {
+  width: 100%;
+  background-color: #ff5b5f;
+  border-color: #ff5b5f;
+  color: $white;
+  border-radius: 0.625rem;
+  margin-bottom: 30px;
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  p {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .warning {
+      margin-right: 15px;
+    }
+  }
+}

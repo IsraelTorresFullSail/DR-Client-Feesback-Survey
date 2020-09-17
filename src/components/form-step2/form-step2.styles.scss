@@ -1,0 +1,269 @@
+@import '../../app.module.scss';
+
+.layer2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../../assets/blob2.svg');
+  background-size: 94.86vw auto;
+  background-repeat: no-repeat;
+  background-position: -1050% 52.5%;
+  padding: 110px 0;
+
+  @media (max-width: $laptop-breakpoint) {
+    background-size: 164.86vw auto;
+    background-position: 154% 49%;
+    padding: 210px 0;
+  }
+  @media (max-width: $small-laptop-breakpoint) {
+    background-size: 184.86vw auto;
+    background-position: 144% 54.5%;
+  }
+  @media (max-width: $tablet-breakpoint) {
+    background-size: 304.86vw auto;
+    background-position: 110% 53.5%;
+    padding: 100px 0 120px 0;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    background-size: 338.86vw auto;
+    padding: 20px 0 100px 0;
+  }
+  @media (max-width: $small-mobile-breakpoint) {
+    background-size: 438.86vw auto;
+    background-position: 105% 53.5%;
+  }
+
+  .digital-name {
+    position: absolute;
+    left: 50px;
+    top: -50px;
+    width: 100%;
+    max-width: 12.76vw;
+    min-height: 48.34vw;
+    background-image: url('../../assets/digital-name.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $small-laptop-breakpoint) {
+      left: 10px;
+      top: 20px;
+      width: 100%;
+      max-width: 22.76vw;
+      min-height: 48.34vw;
+    }
+  }
+
+  .white-box {
+    position: relative;
+    margin: auto auto;
+    width: 100%;
+    max-width: 71.04vw;
+    min-height: 42.08vw;
+    padding: 3.23vw 7.5vw;
+    border-radius: 34px;
+    box-shadow: 0px 0px 78px #1d1d1d1a;
+    background-color: $white;
+    background-image: url('../../assets/image-form2.png');
+    background-size: 28.15vw auto;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    //animation: .5s ease slide-animation;
+
+    @media (max-width: $laptop-breakpoint) {
+      max-width: 75.04vw;
+      background-size: 35.35vw auto;
+      background-position: 0% 80%;
+      padding: 3.23vw 4.5vw;
+    }
+    @media (max-width: $small-laptop-breakpoint) {
+      max-width: 85vw;
+      background-size: 48.35vw auto;
+      background-position: -30% 70%;
+    }
+    @media (max-width: $tablet-breakpoint) {
+      max-width: 95vw;
+      padding: 6.23vw 7.5vw;
+      background-size: 72.35vw auto;
+      background-position: -105% 40%;
+    }
+    @media (max-width: $mobile-breakpoint) {
+      max-width: 95vw;
+      min-height: 202.08vw;
+      padding: 2.23vw 2.5vw;
+      background-size: 140vw auto;
+      background-position: 10% 100%;
+      align-items: flex-end;
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 35px;
+      left: 100px;
+      width: 100%;
+      max-width: 11.35vw;
+      min-height: 5.15vw;
+      background-image: url('../../assets/dr_logo.png');
+      background-size: 11.35vw auto;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @media (max-width: $small-laptop-breakpoint) {
+        left: 70px;
+      }
+      @media (max-width: $tablet-breakpoint) {
+        bottom: 15px;
+        left: 30px;
+        max-width: 26.35vw;
+        min-height: 20.15vw;
+        background-size: 26.35vw auto;
+      }
+      @media (max-width: $mobile-breakpoint) {
+        bottom: -105px;
+        left: 30px;
+        max-width: 36.35vw;
+        min-height: 30.15vw;
+        background-size: 36.35vw auto;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .fields-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .form__textarea {
+          width: 100% !important;
+          background-color: $grayLight !important;
+          margin-bottom: 20px !important;
+          border-radius: 15px !important;
+          padding: 15px !important;
+          border: none !important;
+
+          @media (max-width: $laptop-breakpoint) {
+            max-height: 20vw !important;
+          }
+          @media (max-width: $small-laptop-breakpoint) {
+            max-height: 40vw !important;
+          }
+          @media (max-width: $tablet-breakpoint) {
+            max-height: 60vw !important;
+          }
+          @media (max-width: $mobile-breakpoint) {
+            max-height: 60vw !important;
+          }
+        }
+        .has-error {
+          border: 1px solid #ff5b5f !important;
+        }
+
+        .buttons-container {
+          width: 100% !important;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .dots-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1.35vw;
+
+          .dot {
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            margin: 3px;
+            background-color: transparent;
+            border: 1px solid #bebebe;
+          }
+
+          .active {
+            background-color: #bfbfbf;
+          }
+        }
+      }
+
+      @media (max-width: $laptop-breakpoint) {
+        width: 55%;
+      }
+
+      @media (max-width: $small-laptop-breakpoint) {
+        width: 55%;
+      }
+
+      @media (max-width: $tablet-breakpoint) {
+        width: 65%;
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        width: 100%;
+        background-color: #00000050;
+        border-radius: 30px;
+        padding: 15px;
+        max-height: 130vw;
+        color: $white;
+      }
+      @media (max-width: $small-mobile-breakpoint) {
+        min-height: 145vw;
+      }
+    }
+  }
+}
+
+.MuiInput-underline:before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '\00a0';
+  position: absolute;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: none !important;
+  pointer-events: none;
+}
+
+.MuiInput-underline:after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  border-bottom: none !important;
+  pointer-events: none;
+}
+
+.MuiInputLabel-formControl {
+  top: 0px !important;
+  left: 15px !important;
+  position: absolute;
+  transform: translate(0, 24px) scale(1);
+}
+
+.MuiInputLabel-shrink {
+  transform: translate(0, 10px) scale(0.75) !important;
+  @media (max-width: $laptop-breakpoint) {
+    top: 50px !important;
+    left: 15px !important;
+  }
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: $blueDark !important;
+}

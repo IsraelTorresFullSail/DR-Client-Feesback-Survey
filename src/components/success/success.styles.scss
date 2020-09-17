@@ -1,0 +1,202 @@
+@import '../../app.module.scss';
+
+.layer6 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../../assets/blob4.svg');
+  background-size: 94.86vw auto;
+  background-repeat: no-repeat;
+  background-position: -913% 53.5%;
+  padding: 110px 0;
+
+  @media (max-width: $laptop-breakpoint) {
+    background-size: 114.86vw auto;
+    background-position: 430% 53.5%;
+    padding: 210px 0;
+  }
+  @media (max-width: $small-laptop-breakpoint) {
+    background-size: 134.86vw auto;
+    background-position: 230% 53.5%;
+    padding: 110px 0;
+  }
+  @media (max-width: $tablet-breakpoint) {
+    background-size: 304.86vw auto;
+    background-position: 110% 53.5%;
+    padding: 110px 0;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    background-size: 304.86vw auto;
+    padding: 20px 0 100px 0;
+  }
+
+  .digital-name {
+    position: absolute;
+    left: 50px;
+    top: -50px;
+    width: 100%;
+    max-width: 12.76vw;
+    min-height: 48.34vw;
+    background-image: url('../../assets/digital-name-dark.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .white-box6 {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    margin: auto auto;
+    width: 100%;
+    max-width: 71.04vw;
+    min-height: 42.08vw;
+    border-radius: 34px;
+    box-shadow: 0px 0px 78px #1d1d1d1a;
+    background-color: $white;
+    background-image: url('../../assets/team.png');
+    background-size: 84.15vw auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (max-width: $laptop-breakpoint) {
+      max-width: 75.04vw;
+      background-size: 88.15vw auto;
+    }
+    @media (max-width: $small-laptop-breakpoint) {
+      max-width: 85vw;
+      background-size: 103.22vw auto;
+    }
+    @media (max-width: $tablet-breakpoint) {
+      max-width: 95vw;
+      background-size: 130vw auto;
+      padding-top: 30px;
+    }
+    @media (max-width: 445px) {
+      background-size: 146vw auto;
+    }
+    @media (max-width: $mobile-breakpoint) {
+      max-width: 95vw;
+      background-size: 200vw auto;
+      padding-top: 30px;
+    }
+
+    .success-container-text {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @media (max-width: $tablet-breakpoint) {
+        justify-content: center;
+        align-items: center;
+      }
+      .success-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1.2vw 7.5vw;
+
+        @media (max-width: $tablet-breakpoint) {
+          width: 100%;
+        }
+
+        .logo6 {
+          width: 100%;
+          max-width: 11.35vw;
+          min-height: 5.15vw;
+          background-image: url('../../assets/dr_logo.png');
+          background-size: 8.35vw auto;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+
+          @media (max-width: $tablet-breakpoint) {
+            max-width: 20.35vw;
+            min-height: 14.15vw;
+            background-size: 20.35vw auto;
+          }
+          @media (max-width: $mobile-breakpoint) {
+            max-width: 30.35vw;
+            min-height: 24.15vw;
+            background-size: 30.35vw auto;
+          }
+        }
+
+        .h2-white {
+          font-size: clamp(1.12em, 1.04vw, 1.3em);
+          color: $white;
+          margin-bottom: 10px;
+          text-align: center;
+          font-weight: 300;
+
+          .upper {
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+        }
+      }
+      @media (max-width: $tablet-breakpoint) {
+        margin: 0 auto 25px auto;
+        width: 75%;
+        background-color: #00000080;
+        border-radius: 20px;
+      }
+      @media (max-width: $mobile-breakpoint) {
+        margin: 0 auto 25px auto;
+        width: 90%;
+        background-color: #00000080;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@keyframes slide-animation {
+  from {
+    opacity: 80%;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+
+.MuiInput-underline:before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '\00a0';
+  position: absolute;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: none !important;
+  pointer-events: none;
+}
+
+.MuiInput-underline:after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  border-bottom: none !important;
+  pointer-events: none;
+}
+
+.MuiInputLabel-formControl {
+  top: 0px !important;
+  left: 15px !important;
+  position: absolute;
+  transform: translate(0, 24px) scale(1);
+}
+
+.MuiInputLabel-shrink {
+  transform: translate(0, 10px) scale(0.75) !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: $blueDark !important;
+}
