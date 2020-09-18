@@ -26,8 +26,9 @@
     padding: 110px 0;
   }
   @media (max-width: $mobile-breakpoint) {
-    background-size: 304.86vw auto;
+    background-size: 404.86vw auto;
     padding: 20px 0 100px 0;
+    min-height: 150vh;
   }
 
   .digital-name {
@@ -134,6 +135,10 @@
       justify-content: flex-start;
       align-items: flex-start;
 
+      .strong {
+        font-weight: 500;
+      }
+
       .p-ghost {
         opacity: 0.5;
       }
@@ -155,11 +160,12 @@
           background-color: $grayLight !important;
           margin-bottom: 20px !important;
           border-radius: 5px !important;
-          padding: 15px !important;
+          padding: 15px 15px 15px 30px !important;
           border: none !important;
 
           label {
             opacity: 0.8;
+            margin-left: 15px !important;
           }
 
           span {
