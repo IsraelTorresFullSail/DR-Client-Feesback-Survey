@@ -22,7 +22,7 @@ export class FormStep1 extends Component {
         <div className="white-box">
           <div className="logo"></div>
           <div className="form-container">
-            <h1>Client Feedback Survey</h1>
+            <h1>Feedback Survey</h1>
             <h2>
               <strong className="strong">We're sorry to see you go.</strong> We would love to hear
               from you.
