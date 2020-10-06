@@ -56,6 +56,7 @@ export class FormStep2 extends Component {
                 <div className="dot active"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>
+                <div className="dot"></div>
               </div>
             </div>
           </div>

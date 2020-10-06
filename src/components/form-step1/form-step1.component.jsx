@@ -24,8 +24,8 @@ export class FormStep1 extends Component {
           <div className="form-container">
             <h1>Feedback Survey</h1>
             <h2>
-              <strong className="strong">We're sorry to see you go.</strong> We would love to hear
-              from you.
+              <strong className="strong">We're sorry to see you go.</strong> We
+              would love to hear from you.
             </h2>
             <p className="p-ghost">
               Fields marketing with an <span className="required">*</span> are
@@ -71,6 +71,7 @@ export class FormStep1 extends Component {
               <CustomButton onClick={this.continue}>Next</CustomButton>
               <div className="dots-wrapper">
                 <div className="dot active"></div>
+                <div className="dot"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>
                 <div className="dot"></div>

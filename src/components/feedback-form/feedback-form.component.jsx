@@ -6,6 +6,7 @@ import FormStep1 from '../form-step1/form-step1.component';
 import FormStep2 from '../form-step2/form-step2.component';
 import FormStep3 from '../form-step3/form-step3.component';
 import FormStep4 from '../form-step4/form-step4.component';
+import FormStep5 from '../form-step5/form-step5.component';
 
 export class FeedbackForm extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export class FeedbackForm extends Component {
       businessName: '',
       frustrations: '',
       doneDifferently: '',
+      acountManager: '',
       recommend: 'yes',
       formErrors: {
         firstName: '',
@@ -25,6 +27,7 @@ export class FeedbackForm extends Component {
         businessName: '',
         frustrations: '',
         doneDifferently: '',
+        acountManager: '',
         recommend: '',
       },
       firstNameValid: false,
@@ -32,6 +35,7 @@ export class FeedbackForm extends Component {
       businessNameValid: false,
       frustrationsValid: false,
       doneDifferentlyValid: false,
+      acountManagerValid: false,
       recommendValid: false,
       formValid: false,
       copied: false,
@@ -69,7 +73,7 @@ export class FeedbackForm extends Component {
     let businessNameValid = this.state.businessNameValid;
     let frustrationsValid = this.state.frustrationsValid;
     let doneDifferentlyValid = this.state.doneDifferentlyValid;
-    //let recommendValid = this.state.recommendValid;
+    let acountManagerValid = this.state.acountManagerValid;
 
     switch (fieldName) {
       case 'firstName':
@@ -102,12 +106,12 @@ export class FeedbackForm extends Component {
           ? ''
           : ' is empty or too short';
         break;
-      //   case 'recommend':
-      //     recommendValid = value.length >= 2;
-      //     fieldValidationErrors.recommend = recommendValid
-      //       ? ''
-      //       : ' is empty or too short';
-      //     break;
+      case 'acountManager':
+        acountManagerValid = value.length >= 2;
+        fieldValidationErrors.acountManager = acountManagerValid
+          ? ''
+          : ' is empty or too short';
+        break;
       default:
         break;
     }
@@ -119,7 +123,7 @@ export class FeedbackForm extends Component {
         businessNameValid: businessNameValid,
         frustrationsValid: frustrationsValid,
         doneDifferentlyValid: doneDifferentlyValid,
-        //recommendValid: recommendValid,
+        acountManagerValid: acountManagerValid,
       },
       this.validateForm
     );
@@ -132,9 +136,8 @@ export class FeedbackForm extends Component {
         this.state.lastNameValid &&
         this.state.businessNameValid &&
         this.state.frustrationsValid &&
-        this.state.doneDifferentlyValid,
-      //this.state.recommendValid &&
-      //this.state.servicesValid,
+        this.state.doneDifferentlyValid &&
+        this.state.acountManagerValid,
     });
   }
 
@@ -159,6 +162,7 @@ export class FeedbackForm extends Component {
       businessName,
       frustrations,
       doneDifferently,
+      acountManager,
       recommend,
     } = this.state;
 
@@ -174,8 +178,8 @@ export class FeedbackForm extends Component {
     );
     formData.append('What could we have done differently?', doneDifferently);
     formData.append(
-      'Would the client doneDifferently DR to a friend?',
-      doneDifferently
+      'How could your Account Manager have made your experience more positive?',
+      acountManager
     );
     formData.append(
       'If we were able to change things in the future, would you consider working with us again?',
@@ -197,6 +201,7 @@ export class FeedbackForm extends Component {
       businessName,
       frustrations,
       doneDifferently,
+      acountManager,
       recommend,
       formErrors,
       copied,
@@ -207,6 +212,7 @@ export class FeedbackForm extends Component {
       businessName,
       frustrations,
       doneDifferently,
+      acountManager,
       recommend,
       formErrors,
       copied,
@@ -247,6 +253,15 @@ export class FeedbackForm extends Component {
             case 4:
               return (
                 <FormStep4
+                  nextStep={this.nextStep}
+                  prevStep={this.prevStep}
+                  handleChange={this.handleChange}
+                  values={values}
+                />
+              );
+            case 5:
+              return (
+                <FormStep5
                   prevStep={this.prevStep}
                   handleSubmit={this.handleSubmit}
                   handleChange={this.handleChange}
